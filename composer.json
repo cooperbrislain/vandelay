@@ -1,5 +1,15 @@
 {
+    "name": "spaceboycoop/vandelay",
+    "description": "importer/exporter",
+    "type": "project",
     "require": {
         "vlucas/phpdotenv": "^5.2"
-    }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cooper Brislain",
+            "email": "cbrislain@gmail.com"
+        }
+    ]
 }
