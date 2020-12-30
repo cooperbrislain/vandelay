@@ -2,7 +2,7 @@
 
 use Dotenv\Dotenv;
 
-set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor');
+set_include_path(get_include_path() . PATH_SEPARATOR . '/../vendor');
 
 error_reporting(E_ALL);
 ini_set('html_errors', 1);
