@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfb4e768-d543-4156-9743-6893b50d8330" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/config.php" afterDir="false" />
-    </list>
+    <list default="true" id="dfb4e768-d543-4156-9743-6893b50d8330" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +23,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -53,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609349928270</updated>
       <workItem from="1609349933053" duration="1563000" />
-      <workItem from="1609351538846" duration="6151000" />
+      <workItem from="1609351538846" duration="6442000" />
     </task>
     <servers />
   </component>
