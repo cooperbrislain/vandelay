@@ -2,101 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb4e768-d543-4156-9743-6893b50d8330" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/graham-campbell/result-type/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/graham-campbell/result-type/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/graham-campbell/result-type/src/Error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/graham-campbell/result-type/src/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/graham-campbell/result-type/src/Success.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/src/PhpOption/LazyOption.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/src/PhpOption/None.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/src/PhpOption/Option.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/phpoption/phpoption/src/PhpOption/Some.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/Ctype.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/Php80.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/Resources/stubs/Attribute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/Resources/stubs/Stringable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/Resources/stubs/ValueError.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php80/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/phpstan.src.neon.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Dotenv.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ExceptionInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidEncodingException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Loader/Loader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Loader/LoaderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Loader/Resolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/Entry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/EntryParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/Lexer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/Lines.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/Parser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/ParserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Parser/Value.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/AdapterInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ApacheAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ArrayAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/EnvConstAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/GuardedWriter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ImmutableWriter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/MultiReader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/MultiWriter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/PutenvAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ReaderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ReplacingWriter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/ServerConstAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/Adapter/WriterInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/AdapterRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/RepositoryBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Repository/RepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/File/Paths.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/File/Reader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/FileStore.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/StoreBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/StoreInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Store/StringStore.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Util/Regex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Util/Str.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/config.php" afterDir="false" />
     </list>
@@ -125,6 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -142,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609349928270</updated>
       <workItem from="1609349933053" duration="1563000" />
-      <workItem from="1609351538846" duration="953000" />
+      <workItem from="1609351538846" duration="1395000" />
     </task>
     <servers />
   </component>

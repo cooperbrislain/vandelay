@@ -3,6 +3,9 @@
 error_reporting(E_ALL);
 ini_set('html_errors', 1);
 ini_set('display_errors', 1);;
-require_once("./.env");
-$source = mysqli_connect("127.0.0.1", DB_USER, DB_PASSWORD, "migrated_from_old_site");
-$target = mysqli_connect("127.0.0.1", DB_USER, DB_PASSWORD, DB_NAME);
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$source = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], "migrated_from_old_site");
+$target = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
