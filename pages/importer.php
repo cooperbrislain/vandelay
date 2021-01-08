@@ -28,7 +28,7 @@ if ($opts['domino'] == 1) {
         $limit = $opts['limit'];
         $count = 0;
         $q = <<< QUERY
-            SELECT v_id FROM venues 
+            SELECT venues.v_id FROM venues 
             LEFT JOIN v_import ON venues.v_id = v_import.v_id
             WHERE v_import.status != 1
             AND v_id > {$start}
