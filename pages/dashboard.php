@@ -26,9 +26,9 @@ while(mysqli_fetch_assoc($res)) {
 ?>
 <div class="container">
     <dl>
-        <dt>Total Items</dt><dd></dd>
-        <dt>Items Imported</dt><dd></dd>
-        <dt>Items Remaining</dt><dd></dd>
-        <dt>Errors</dt><dd></dd>
+        <dt>Total Items</dt><dd>$num_total</dd>
+        <dt>Items Imported</dt><dd>$num_imported</dd>
+        <dt>Items Remaining</dt><dd>$num_remaining</dd>
+        <dt>Errors</dt><dd>$num_errors</dd>
     </dl>
 </div>

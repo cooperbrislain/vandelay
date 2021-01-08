@@ -172,7 +172,8 @@ function doq($q) {
     if ($opts['show_queries']) {
         $str = "Result: ";
         foreach ($arr as $k => $v) {
-            $str .= "{$k}:" . print_r($v);
+            $strv = print_r($v);
+            $str .= "{$k}: {$v}; ";
         }
         msg("query", $str);
     }
