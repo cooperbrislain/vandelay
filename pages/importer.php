@@ -26,6 +26,7 @@ if ($opts['domino'] == 1) {
         $count = 0;
         while ($count < $limit) {
             if (!$v_obj = import_venue($i)) continue;
+            if ($v_obj->status) continue;
             $t_obj = translate_venue($v_obj);
             $o_obj = construct_post($t_obj);
             if (insert_post($o_obj, $v_obj->v_id))
