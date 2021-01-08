@@ -31,7 +31,7 @@ if ($opts['domino'] == 1) {
             SELECT venues.v_id FROM venues 
             LEFT JOIN v_import ON venues.v_id = v_import.v_id
             WHERE v_import.status != 1
-            AND v_id > {$start}
+            AND venues.v_id > {$start}
             LIMIT {$limit}
 QUERY;
         $res = doq($q);
