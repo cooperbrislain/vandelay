@@ -1,8 +1,8 @@
 <?php
 $opts = [
-    'start'=>0,
-    'limit'=>5,
-    'page'=>'dashboard',
+    'start' =>  0,
+    'limit' =>  5,
+    'page'  =>  'dashboard',
 ];
 require_once('config.php');
 require_once('includes/functions.php');

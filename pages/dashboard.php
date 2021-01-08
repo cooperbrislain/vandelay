@@ -3,7 +3,7 @@ require_once('includes/opts.php');
 require_once('includes/data.php');
 
 $q = <<<QUERY
-    SELECT v_import.status, COUNT(venues.v_id) AS count, SUM(count) AS total FROM venues 
+    SELECT v_import.status, COUNT(venues.v_id) AS count FROM venues 
     LEFT JOIN v_import ON venues.v_id = v_import.v_id 
     GROUP BY v_import.status
 QUERY;
