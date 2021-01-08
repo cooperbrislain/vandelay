@@ -1,7 +1,6 @@
 <?php
 require_once('includes/opts.php');
 require_once('includes/data.php');
-debug('importer');
 
 if(!empty($opts)){
     $v_obj = import_venue($opts['v_id']);

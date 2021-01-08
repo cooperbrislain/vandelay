@@ -1,7 +1,8 @@
 <?php
 $opts = [
     'start'=>0,
-    'limit'=>5
+    'limit'=>5,
+    'page'=>'dashboard',
 ];
 require_once('config.php');
 require_once('includes/functions.php');
@@ -13,12 +14,13 @@ require_once('includes/data.php');
 <body>
 <? require_once('includes/header.php'); ?>
 <main>
-<? switch($_GET['page']) {
-    case 'import': include('pages/importer.php'); break;
-    case 'export': include('pages/exporter.php'); break;
-    case 'venue': include('pages/venue.php'); break;
-    case 'debug': include('pages/debug.php'); break;
-    default: break;
+<? switch($opts['page']) {
+    case 'import':  include('pages/importer.php'); break;
+    case 'export':  include('pages/exporter.php'); break;
+    case 'venue':   include('pages/venue.php'); break;
+    case 'debug':   include('pages/debug.php'); break;
+    case 'dashboard':
+    default:        include('pages/dashboard.php'); break;
 } ?>
 </main>
 <? require_once('includes/footer.php'); ?>
