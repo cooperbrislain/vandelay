@@ -4,7 +4,8 @@
     "type": "project",
     "require": {
         "vlucas/phpdotenv": "^5.2",
-        "ext-mysqli": "*"
+        "ext-mysqli": "*",
+        "ext-json": "*"
     },
     "license": "MIT",
     "authors": [
