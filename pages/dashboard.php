@@ -12,16 +12,17 @@ $num_total = 0;
 $num_imported = 0;
 $num_remaining = 0;
 $num_errors = 0;
-while(mysqli_fetch_assoc($res)) {
-    switch($res['status']) {
+while($row = mysqli_fetch_assoc($res)) {
+    switch($row['status']) {
         case(1) :
-            $num_imported = $res['count'];
+            $num_imported = $row['count'];
         case(-1) :
-            $num_errors = $res['count'];
-        default:
-            $num_remaining = $res['count'];
+            $num_errors = $row['count'];
+        case (0) :
+        default :
+            $num_remaining = $row['count'];
     }
-    $num_total += $res['count'];
+    $num_total += $row['count'];
 }
 ?>
 <div class="container">
