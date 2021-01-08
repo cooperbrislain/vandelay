@@ -55,12 +55,10 @@ function translate_venue(object $in) : object {
     foreach($stack as $k => $f) {
         if (!is_array($f)) $f = array($f);
         foreach($f as $f_) {
-            status($f_);
-            status($k);
             $out->$k = $tran[$f_]($out->$k);
         }
         $sv = print_r($out->$k, 1);
-//        debug("{$f}({$k}) = {$sv}"); // todo: figure out why this is printing when debug is not passed
+        debug("{$f}({$k}) = {$sv}");
     }
 
     return $out;
