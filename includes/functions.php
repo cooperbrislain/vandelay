@@ -60,7 +60,7 @@ function translate_venue(object $in) : object {
             $out->$k = $tran[$f_]($out->$k);
         }
         $sv = print_r($out->$k, 1);
-        debug("{$f}({$k}) = {$sv}");
+//        debug("{$f}({$k}) = {$sv}"); // todo: figure out why this is printing when debug is not passed
     }
 
     return $out;
