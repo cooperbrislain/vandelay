@@ -168,11 +168,14 @@ function doq($q) {
     if ($opts['show_queries']) msg("query", $q);
     $res = mysqli_query($source, $q);
     $arr = mysqli_fetch_assoc($res);
-    $str = "Result: ";
-    foreach ($arr as $k => $v) {
-        $str .= "{$k}:" . print_r($v);
+
+    if ($opts['show_queries']) {
+        $str = "Result: ";
+        foreach ($arr as $k => $v) {
+            $str .= "{$k}:" . print_r($v);
+        }
+        msg("query", $str);
     }
-    print($str);
     return $res;
 }
 
