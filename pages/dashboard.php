@@ -22,7 +22,7 @@ while($row = mysqli_fetch_assoc($res)) {
             break;
         case (0):
         default:
-            $num_remaining = $row['count'];
+            $num_remaining += $row['count'];
     }
     $num_total += $row['count'];
 }
