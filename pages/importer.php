@@ -34,7 +34,7 @@ if ($opts['domino'] == 1) {
             $o_obj = construct_post($t_obj);
             if (insert_post($o_obj, $v_obj->v_id)) {
                 $count++;
-                status("{$count} POSTS INSERTED");
+                status("{$count}/{$limit} POSTS INSERTED");
             }
             $i++;
         }

@@ -48,19 +48,13 @@ function translate_venue(object $in) : object {
     $stack = array_fill_keys(['venue','alcohol','music','accom','catering','uses'], ['pipe', 'link_to_use']);
     $stack = array_merge($stack, array_fill_keys(['types'], ['comma', 'link_to_type']));
     $stack = array_merge($stack, array_fill_keys(['social'], ['json']));
-    debug($stack);
 
     $out = clone $in;
-
     foreach($stack as $k => $f) {
         if (!is_array($f)) $f = array($f);
-        foreach($f as $f_) {
-            $out->$k = $tran[$f_]($out->$k);
-        }
-        $sv = print_r($out->$k, 1);
-        debug("{$f}({$k}) = {$sv}");
+        foreach($f as $f_) $out->$k = $tran[$f_]($out->$k);
+        debug(print_r($out->$k, 1));
     }
-
     return $out;
 }
 
@@ -106,7 +100,7 @@ function construct_post(object $obj) : array {
 }
 
 function insert_post($post, $v_id=0) : bool {
-    status("Inserting Post: ${v_id} ");
+    status("INSERT_POST: {$v_id} ");
     try {
         $result = wp_insert_post($post);
         if (is_wp_error($result)) {
