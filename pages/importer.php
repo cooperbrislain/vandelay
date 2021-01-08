@@ -24,11 +24,21 @@ if ($opts['domino'] == 1) {
     if (!$opts['start']) status("START NOT DEFINED");
     else if (!$opts['limit']) status("LIMIT NOT DEFINED");
     else {
-        $i = $opts['start'];
+        $start = $opts['start'];
         $limit = $opts['limit'];
         $count = 0;
-        while ($count < $limit) {
-            if (!$v_obj = import_venue($i)) continue;
+        $q = <<< QUERY
+            SELECT v_id FROM venues 
+            LEFT JOIN v_import ON venues.v_id = v_import.v_id
+            WHERE v_import.status != 1
+            AND v_id > {$start}
+            LIMIT {$limit}
+QUERY;
+        $res = doq($q);
+        while ($row = mysqli_fetch_assoc($res)) {
+            $v_obj = import_venue($row['v_id']);
+            if (!$v_obj) continue;
+            if (!$v_obj->v_id) continue;
             print_r($v_obj);
             if ($v_obj->status) continue;
             $t_obj = translate_venue($v_obj);
@@ -38,7 +48,6 @@ if ($opts['domino'] == 1) {
                 $count++;
                 status("{$count}/{$limit} POSTS INSERTED");
             }
-            $i++;
         }
     }
 }
