@@ -1,5 +1,6 @@
 <?php
 
+require_once("vendor/autoload.php");
 use Dotenv\Dotenv;
 
 define('DIR_VENDOR', __DIR__.'/vendor/');
