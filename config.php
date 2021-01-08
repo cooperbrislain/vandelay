@@ -2,6 +2,8 @@
 
 use Dotenv\Dotenv;
 
+define('DIR_VENDOR', __DIR__.'/vendor/');
+
 set_include_path(get_include_path() .
     PATH_SEPARATOR . '/vendor' .
     PATH_SEPARATOR . '..' .
@@ -14,7 +16,7 @@ error_reporting(E_ALL);
 ini_set('html_errors', 1);
 ini_set('display_errors', 1);;
 
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(DIR_VENDOR);
 $dotenv->load();
 
 $source = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], "migrated_from_old_site");
