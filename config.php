@@ -1,10 +1,9 @@
 <?php
+define( 'WP_DEBUG', false );
 require_once ("../wp-config.php");
 require_once("vendor/autoload.php");
 
 use Dotenv\Dotenv;
-
-define( 'WP_DEBUG', false );
 
 define('DIR_VENDOR', __DIR__.'/vendor/');
 
