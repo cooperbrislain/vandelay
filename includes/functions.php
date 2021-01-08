@@ -108,6 +108,7 @@ function construct_post(object $obj) : array {
 }
 
 function insert_post($post, $v_id=0) {
+    status("Inserting Post: ${v_id} ");
     try {
         $result = wp_insert_post($post);
         if (is_wp_error($result)) {
@@ -128,7 +129,7 @@ function insert_post($post, $v_id=0) {
             }
         }
     } catch (Exception $e) {
-
+        status($e);
     }
 
 }
