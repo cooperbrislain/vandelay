@@ -21,7 +21,7 @@ require_once('includes/data.php');
 
 if ($opts['domino'] == 1) {
     status("IMPORTING {$opts['start']} RECORDS BEGINNING AT {$opts['limit']}");
-    if (!$opts['start']) status("START NOT DEFINED");
+    if ($opts['start']) status("START NOT DEFINED");
     else if (!$opts['limit']) status("LIMIT NOT DEFINED");
     else {
         $i = $opts['start'];
@@ -32,8 +32,10 @@ if ($opts['domino'] == 1) {
             if ($v_obj->status) continue;
             $t_obj = translate_venue($v_obj);
             $o_obj = construct_post($t_obj);
-            if (insert_post($o_obj, $v_obj->v_id))
+            if (insert_post($o_obj, $v_obj->v_id)) {
                 $count++;
+                status("{$count} POSTS INSERTED");
+            }
             $i++;
         }
     }
