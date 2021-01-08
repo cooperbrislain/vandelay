@@ -37,7 +37,7 @@ function import_venue(int $v_id) {
             LEFT JOIN v_import ON venues.v_id = v_import.v_id
             LEFT JOIN type_to_venue ON venues.v_id = type_to_venue.v_id
             LEFT JOIN venue_to_use ON venues.v_id = venue_to_use.v_id
-            WHERE venues.v_id = {$opts['v_id']}
+            WHERE venues.v_id = {$v_id}
     QUERY;
 
     $res = doq($q);
