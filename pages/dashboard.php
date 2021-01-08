@@ -7,6 +7,7 @@ $q = <<<QUERY
     LEFT JOIN v_import ON venues.v_id == v_import.v_id 
     GROUP BY v_import.status
 QUERY;
+$res = doq($q);
 
 ?>
 <div class="container">
