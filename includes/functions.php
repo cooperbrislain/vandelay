@@ -22,8 +22,10 @@ $tran = array( // make these a little more robust.
     }
 );
 
-function import_venue(int $v_id) : object {
+function import_venue(int $v_id) {
     global $keys, $uses, $opts, $source;
+
+    if (!$v_id) return false;
 
     $q = <<<QUERY
         SELECT *,
@@ -39,7 +41,9 @@ function import_venue(int $v_id) : object {
     QUERY;
 
     $res = doq($q);
-    return mysqli_fetch_object($res);
+    $row = mysqli_fetch_object($res);
+    if (!$row) return false;
+    else return $row;
 }
 
 function translate_venue(object $in) : object {
