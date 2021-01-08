@@ -16,6 +16,7 @@ error_reporting(E_ALL);
 ini_set('html_errors', 1);
 ini_set('display_errors', 1);;
 
+echo DIR_VENDOR;
 $dotenv = Dotenv::createImmutable(DIR_VENDOR);
 $dotenv->load();
 
