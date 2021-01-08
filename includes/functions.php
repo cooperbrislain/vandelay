@@ -100,7 +100,7 @@ function construct_post(object $obj) : array {
 }
 
 function insert_post($post, $v_id=0) : bool {
-    status("INSERT_POST: {$v_id} ");
+    status("INSERT_POST: {$v_id}");
     try {
         $result = wp_insert_post($post);
         if (is_wp_error($result)) {
