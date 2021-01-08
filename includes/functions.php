@@ -166,7 +166,14 @@ MSG;
 function doq($q) {
     global $source, $opts;
     if ($opts['show_queries']) msg("query", $q);
-    return mysqli_query($source, $q);
+    $res = mysqli_query($source, $q);
+    $arr = mysqli_fetch_assoc($res);
+    $str = "Result: ";
+    foreach ($arr as $k => $v) {
+        $str .= "{$k}:" . print_r($v);
+    }
+    print($str);
+    return $res;
 }
 
 function debug($ob) {
