@@ -5,8 +5,9 @@ use Dotenv\Dotenv;
 set_include_path(get_include_path() .
     PATH_SEPARATOR . '/vendor' .
     PATH_SEPARATOR . '..' .
-    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com'.
-    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com/vandelay'
+    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com' .
+    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com/vandelay' .
+    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com/vandelay/vendor'
 );
 echo get_include_path();
 error_reporting(E_ALL);

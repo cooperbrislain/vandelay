@@ -4,3 +4,4 @@ vendor
 error_log
 composer.phar
 php.ini
+pip.ini
