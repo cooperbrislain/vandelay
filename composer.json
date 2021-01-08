@@ -3,7 +3,8 @@
     "description": "importer/exporter",
     "type": "project",
     "require": {
-        "vlucas/phpdotenv": "^5.2"
+        "vlucas/phpdotenv": "^5.2",
+        "ext-mysqli": "*"
     },
     "license": "MIT",
     "authors": [
