@@ -21,8 +21,10 @@ require_once('includes/data.php');
 
 if ($opts['domino'] == 1) {
     status("IMPORTING {$opts['start']} RECORDS BEGINNING AT {$opts['limit']}");
-    if ($opts['start'] && $opts['limit']) {
-        $i=$opts['start'];
+    if (!$opts['start']) status("START NOT DEFINED");
+    else if (!$opts['limit']) status("LIMIT NOT DEFINED");
+    else {
+        $i = $opts['start'];
         $limit = $opts['limit'];
         $count = 0;
         while ($count < $limit) {
@@ -34,7 +36,5 @@ if ($opts['domino'] == 1) {
                 $count++;
             $i++;
         }
-    } else {
-        status("PLEASE DEFINE START AND LIMIT");
     }
 }
