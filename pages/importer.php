@@ -29,9 +29,12 @@ if ($opts['domino'] == 1) {
         $count = 0;
         $q = <<< QUERY
             SELECT v_id, status FROM 
-                (SELECT venues.v_id, v_import.status 
-                FROM venues LEFT JOIN v_import ON venues.v_id = v_import.v_id ) 
-                    AS sub 
+                (SELECT 
+                    venues.v_id, v_import.status 
+                FROM venues 
+                LEFT JOIN v_import ON venues.v_id = v_import.v_id 
+                ORDER BY v_id
+                ) AS sub 
             WHERE sub.status IS NULL OR 0
                 AND v_id >= {$start}
             LIMIT {$limit}
