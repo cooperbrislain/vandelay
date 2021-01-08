@@ -167,16 +167,16 @@ function doq($q) {
     global $source, $opts;
     if ($opts['show_queries']) msg("query", $q);
     $res = mysqli_query($source, $q);
-    $arr = mysqli_fetch_assoc($res);
+//    $arr = mysqli_fetch_assoc($res);
 
-    if ($opts['show_queries']) {
-        $str = "Result: ";
-        foreach ($arr as $k => $v) {
-            $vstr = print_r($v, true);
-            $str .= "{$k}: {$vstr}; ";
-        }
-        msg("query", $str);
-    }
+//    if ($opts['show_queries']) {
+//        $str = "Result: ";
+//        foreach ($arr as $k => $v) {
+//            $vstr = print_r($v, true);
+//            $str .= "{$k}: {$vstr}; ";
+//        }
+//        msg("query", $str);
+//    }
     return $res;
 }
 
