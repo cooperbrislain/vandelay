@@ -107,7 +107,7 @@ function construct_post(object $obj) : array {
     return $post;
 }
 
-function insert_post($post, $v_id=0) {
+function insert_post($post, $v_id=0) : bool {
     status("Inserting Post: ${v_id} ");
     try {
         $result = wp_insert_post($post);
@@ -130,8 +130,9 @@ function insert_post($post, $v_id=0) {
         }
     } catch (Exception $e) {
         status($e);
+        return false;
     }
-
+    return true;
 }
 
 function render_fields($obj) {
