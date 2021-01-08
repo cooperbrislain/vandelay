@@ -33,10 +33,11 @@ if ($opts['domino'] == 1) {
                     venues.v_id, v_import.status 
                 FROM venues 
                 LEFT JOIN v_import ON venues.v_id = v_import.v_id 
-                ORDER BY v_id
+                ORDER BY venues.v_id
                 ) AS sub 
             WHERE sub.status IS NULL OR 0
                 AND v_id >= {$start}
+            ORDER BY v_id
             LIMIT {$limit}
 QUERY;
         $res = doq($q);
