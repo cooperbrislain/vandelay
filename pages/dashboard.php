@@ -14,12 +14,14 @@ $num_remaining = 0;
 $num_errors = 0;
 while($row = mysqli_fetch_assoc($res)) {
     switch($row['status']) {
-        case(1) :
+        case(1):
             $num_imported = $row['count'];
-        case(-1) :
+            break;
+        case(-1):
             $num_errors = $row['count'];
-        case (0) :
-        default :
+            break;
+        case (0):
+        default:
             $num_remaining = $row['count'];
     }
     $num_total += $row['count'];
