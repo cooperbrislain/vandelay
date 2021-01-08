@@ -7,7 +7,7 @@ require_once('config.php');
 require_once('includes/functions.php');
 require_once('includes/opts.php');
 require_once('includes/data.php');
-require_once('../wp_includes/post.php');
+require_once('../wp-includes/post.php');
 ?>
 <html lang="en">
 <? require('includes/head.php'); ?>
