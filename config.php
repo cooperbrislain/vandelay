@@ -18,7 +18,7 @@ ini_set('html_errors', 1);
 ini_set('display_errors', 1);;
 
 echo DIR_VENDOR;
-$dotenv = Dotenv::createImmutable(DIR_VENDOR);
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $source = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], "migrated_from_old_site");
