@@ -2,3 +2,5 @@
 .DS_Store
 vendor
 error_log
+composer.phar
+php.ini
