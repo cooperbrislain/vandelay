@@ -20,6 +20,7 @@ require_once('includes/data.php');
 */ // TODO: figure out where to put this or remove it.
 
 if ($opts['domino'] == 1) {
+    status("IMPORTING {$opts['start']} RECORDS BEGINNING AT {$opts['limit']}");
     if ($opts['start'] && $opts['limit']) {
         $i=$opts['start'];
         $limit = $opts['limit'];
@@ -33,5 +34,7 @@ if ($opts['domino'] == 1) {
                 $count++;
             $i++;
         }
+    } else {
+        status("PLEASE DEFINE START AND LIMIT");
     }
 }
