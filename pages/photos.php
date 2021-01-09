@@ -6,8 +6,8 @@ $q = <<<QUERY
     SELECT *, venue_photos.v_id AS v_id FROM venue_photos
     INNER JOIN v_import ON venue_photos.v_id = v_import.v_id
     WHERE status = 1
-    ORDER BY timestamp DESC
     GROUP BY venue_photos.v_id
+    ORDER BY timestamp DESC
 QUERY;
 $res = doq($q);
 $photos = [];
