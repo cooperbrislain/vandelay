@@ -38,7 +38,9 @@ while ($row = mysqli_fetch_assoc($res)) {
                 <div class="import photos">
                     <? foreach ($venue->photos as $photo) {
                         echo <<<HTML
-                            <img src="{$source_baseurl}/{$venue->v_id}/{$photo->file}" alt="photo">
+                            <div class="item">
+                                <img src="{$source_baseurl}/{$venue->v_id}/{$photo->file}" alt="photo"> 
+                            </div>
                         HTML;
                     } ?>
                 </div>
