@@ -23,7 +23,8 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 ?>
 <table>
-    <tr>v_id<td></td>wp_id<td></td>filename</td></tr>
+    <thead><tr><td>v_id</td><td>wp_id</td><td>filename</td></tr></thead>
+    <tbody>
     <? foreach ($photos as $photo) {
         echo <<<HTML
             <tr>
@@ -33,4 +34,5 @@ while ($row = mysqli_fetch_assoc($res)) {
             </tr>
             HTML;
     } ?>
+    </tbody>
 </table>
