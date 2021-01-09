@@ -30,18 +30,20 @@ while ($row = mysqli_fetch_assoc($res)) {
 <table>
     <thead><tr><td>v_id</td><td>wp_id</td><td>filename</td></tr></thead>
     <tbody>
-    <? foreach ($venues as $venue) {
-        echo <<<HTML
-            <tr>
-                <td>{$venue->v_id}</td>
-                <td>{$venue->wp_id}</td>
-                <td>
-                    <div class="import thumbnail">
-                        <img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}" alt="photo">
-                    </div>
-                </td>
-            </tr>
-            HTML;
-    } ?>
+    <? foreach ($venues as $venue) { ?>
+        <tr>
+            <td><?=$venue->v_id?></td>
+            <td><?=$venue->wp_id?></td>
+            <td>
+                <div class="import photos">
+                    <? foreach ($venue->photos as $photo) {
+                        echo <<<HTML
+                            <img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}\" alt="photo">
+                        HTML;
+                    } ?>
+                </div>
+            </td>
+        </tr>
+    <? } ?>
     </tbody>
 </table>
