@@ -180,10 +180,11 @@ dl dd {
     flex-direction: row;
 }
 
-.import.photos .item {
+.import.photos>.item {
+    display: block;
     flex: auto;
-    height: 150px;
-    width: 150px;
+    height: 150px; !important;
+    width: 150px; !important;
     overflow: hidden;
 }
 
