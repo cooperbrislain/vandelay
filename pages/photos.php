@@ -12,7 +12,6 @@ QUERY;
 $res = doq($q);
 $photos = [];
 while ($row = mysqli_fetch_assoc($res)) {
-    status(print_r($row, true));
     $photo = new stdClass();
     $photo->v_id = $row['v_id'];
     $photo->file = $row['photo'];
