@@ -175,14 +175,16 @@ dl dd {
 .import.photos {
     display: flex;
     height: 150px;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
     flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 .import.photos>.item {
     display: block;
-    flex: auto;
+    flex: 0 1 auto;
     height: 150px; !important;
     width: 150px; !important;
     overflow: hidden;
