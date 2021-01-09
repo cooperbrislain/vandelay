@@ -172,7 +172,16 @@ dl dd {
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+.import.photos {
+    display: flex;
+    height: 150px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
 .import.photos img {
+    flex: auto;
     height: 150px;
     width: auto;
 }
