@@ -45,7 +45,6 @@ QUERY;
             $v_obj = import_venue($row['v_id']);
             if (!$v_obj) continue;
             if (!$v_obj->v_id) continue;
-            print_r($v_obj);
             if ($v_obj->status) continue;
             $t_obj = translate_venue($v_obj);
             $o_obj = construct_post($t_obj);

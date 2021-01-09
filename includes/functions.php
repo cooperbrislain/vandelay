@@ -161,9 +161,9 @@ function msg($t, $m) {
 MSG;
 }
 
-function doq($q) {
+function doq($q, $display = true) {
     global $source, $opts;
-    if ($opts['show_queries']) msg("query", $q);
+    if ($opts['show_queries'] && $display) msg("query", $q);
     $res = mysqli_query($source, $q);
 //    $arr = mysqli_fetch_assoc($res);
 

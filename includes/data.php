@@ -5,7 +5,7 @@ $types = Array();
 
 try {
     $q = "SELECT * FROM v_uses";
-    $res = doq($q);
+    $res = doq($q, false);
     if(is_bool($res)) throw new Exception('failed to load uses');
 } catch (Exception $e) {;
     debug($e);
@@ -16,7 +16,7 @@ if (!is_bool($res))
 
 try {
     $q = "SELECT * FROM v_types";
-    $res = doq($q);
+    $res = doq($q, false);
     if (is_bool($res)) throw new Exception('failed to load types');
 } catch (Exception $e) {
     debug($e);
