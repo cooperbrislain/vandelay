@@ -173,6 +173,6 @@ dl dd {
 }
 
 .import.photos img {
-    max-height: 150px;
-    max-width: 150px;
+    height: 150px;
+    width: auto;
 }
