@@ -11,26 +11,35 @@ $q = <<<QUERY
     ORDER BY v_import.wp_id DESC
 QUERY;
 $res = doq($q);
-$photos = [];
+$venues = [];
 while ($row = mysqli_fetch_assoc($res)) {
+    if (!$venues[$row['v_id']]) {
+        $venue = new stdClass();
+        $venue->v_id = $row['v_id'];
+        $venue->wp_id = $row['wp_id'];
+        $venue->photos = [];
+        $venues[$row['v_id']] = $venue;
+    }
     $photo = new stdClass();
-    $photo->v_id = $row['v_id'];
     $photo->file = $row['photo'];
-    $photo->wp_id = $row['wp_id'];
     $photo->alt = $row['alt'];
     $photo->cover = $row['cover'];
-    $photos[] = $photo;
+    $venues[$row['v_id']]->photos[] = $photo;
 }
 ?>
 <table>
     <thead><tr><td>v_id</td><td>wp_id</td><td>filename</td></tr></thead>
     <tbody>
-    <? foreach ($photos as $photo) {
+    <? foreach ($venues as $venue) {
         echo <<<HTML
             <tr>
-                <td>{$photo->v_id}</td>
-                <td>{$photo->wp_id}</td>
-                <td><img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}" alt="photo"></td>
+                <td>{$venue->v_id}</td>
+                <td>{$venue->wp_id}</td>
+                <td>
+                    <div class="import thumbnail">
+                        <img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}" alt="photo">
+                    </div>
+                </td>
             </tr>
             HTML;
     } ?>
