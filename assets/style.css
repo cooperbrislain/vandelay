@@ -171,3 +171,8 @@ dl dd {
     width: 100%;
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+.import.photos img {
+    max-height: 150px;
+    max-width: 150px;
+}
