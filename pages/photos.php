@@ -23,16 +23,14 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 ?>
 <table>
-    <thead><tr>v_id<td></td>wp_id<td></td>filename</td></tr></thead>
-    <tbody>
-        <? foreach ($photos as $photo) {
-            echo <<<HTML
-                <tr>
-                    <td>{$photo->v_id}</td>
-                    <td>{$photo->wp_id}</td>
-                    <td><img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}" alt="photo"></td>
-                </tr>
-                HTML;
-        } ?>
-    </tbody>
+    <tr>v_id<td></td>wp_id<td></td>filename</td></tr>
+    <? foreach ($photos as $photo) {
+        echo <<<HTML
+            <tr>
+                <td>{$photo->v_id}</td>
+                <td>{$photo->wp_id}</td>
+                <td><img src="{$source_baseurl}/{$photo->v_id}/{$photo->file}" alt="photo"></td>
+            </tr>
+            HTML;
+    } ?>
 </table>
