@@ -19,8 +19,9 @@ require_once('../wp-includes/post.php');
     case 'export':  include('pages/exporter.php'); break;
     case 'venue':   include('pages/venue.php'); break;
     case 'debug':   include('pages/debug.php'); break;
-    case 'dashboard':
-    default:        include('pages/dashboard.php'); break;
+    default:
+    case 'dashboard': include('pages/dashboard.php'); break;
+    case 'photos': include('pages/photos.php'); break;
 } ?>
 </main>
 <? require_once('includes/footer.php'); ?>
