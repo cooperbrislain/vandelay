@@ -4,7 +4,9 @@ require_once('includes/data.php');
 
 $source_baseurl = 'http://smallweddings.com/ven_img';
 
-$venues = get_photos();
+if ($opts['v_id']) {
+    $venues = get_photos($opts['v_id']);
+}
 
 //$filename = $_FILES["file"]["attachment"];
 
