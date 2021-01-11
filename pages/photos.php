@@ -28,4 +28,4 @@ $venues = get_photos();
 //$attach_data = wp_generate_attachment_metadata($attach_id, $filename);
 //wp_update_attachment_metadata($attach_id, $attach_data);
 
-include "../includes/list_venue_photos.php";
+include "includes/list_venue_photos.php";
