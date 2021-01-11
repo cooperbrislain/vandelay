@@ -150,7 +150,6 @@ function get_photos($v_id = 0) {
             INNER JOIN v_import ON venue_photos.v_id = v_import.v_id
             WHERE status = 1
             AND venue_photos.v_id = {$v_id}
-            LIMIT 1
         QUERY;
     } else {
         $q = <<<QUERY
