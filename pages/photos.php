@@ -4,48 +4,28 @@ require_once('includes/data.php');
 
 $source_baseurl = 'http://smallweddings.com/ven_img';
 
-$q = <<<QUERY
-    SELECT *, venue_photos.v_id AS v_id FROM venue_photos
-    INNER JOIN v_import ON venue_photos.v_id = v_import.v_id
-    WHERE status = 1
-    ORDER BY v_import.wp_id DESC
-QUERY;
-$res = doq($q);
-$venues = [];
-while ($row = mysqli_fetch_assoc($res)) {
-    if (!$venues[$row['v_id']]) {
-        $venue = new stdClass();
-        $venue->v_id = $row['v_id'];
-        $venue->wp_id = $row['wp_id'];
-        $venue->photos = [];
-        $venues[$row['v_id']] = $venue;
-    }
-    $photo = new stdClass();
-    $photo->file = $row['photo'];
-    $photo->alt = $row['alt'];
-    $photo->cover = $row['cover'];
-    $venues[$row['v_id']]->photos[] = $photo;
-}
-?>
-<table>
-    <thead><tr><td>v_id</td><td>wp_id</td><td>filename</td></tr></thead>
-    <tbody>
-    <? foreach ($venues as $venue) { ?>
-        <tr>
-            <td><?=$venue->v_id?></td>
-            <td><?=$venue->wp_id?></td>
-            <td>
-                <div class="import photos">
-                    <? foreach ($venue->photos as $photo) {
-                        echo <<<HTML
-                            <div class="item">
-                                <img src="{$source_baseurl}/{$venue->v_id}/{$photo->file}" alt="photo"> 
-                            </div>
-                        HTML;
-                    } ?>
-                </div>
-            </td>
-        </tr>
-    <? } ?>
-    </tbody>
-</table>
+$venues = get_photos();
+
+//$filename = $_FILES["file"]["attachment"];
+
+//$post_id = $_POST["post_id"];
+
+//$filetype = wp_check_filetype(basename($filename), null);
+
+//$wp_upload_dir = wp_upload_dir();
+
+//$attachment = array(
+//    'guid' => $wp_upload_dir['url'] . '/' . basename($filename),
+//    'post_mime_type' => $filetype['type'],
+//    'post_title' => preg_replace('/\.[^.]+$/', '', basename($filename)),
+//    'post_content' => '',
+//    'post_status' => 'inherit'
+//);
+
+
+//$attachment_id = wp_insert_attachment($attachment, $filename, $post_id);
+//require_once(ABSPATH . 'wp-admin/includes/image.php');
+//$attach_data = wp_generate_attachment_metadata($attach_id, $filename);
+//wp_update_attachment_metadata($attach_id, $attach_data);
+
+include "../includes/list_venue_photos.php";

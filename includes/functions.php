@@ -142,6 +142,43 @@ function render_fields($obj) {
     <?
 }
 
+function get_photos($v_id = 0) {
+    $baseurl = 'http://smallweddings.com/ven_img';
+    if ($v_id) {
+        $q = <<<QUERY
+            SELECT *, venue_photos.v_id AS v_id FROM venue_photos
+            INNER JOIN v_import ON venue_photos.v_id = v_import.v_id
+            WHERE status = 1
+            AND venue_photos.v_id = {$v_id}
+            LIMIT 1
+        QUERY;
+    } else {
+        $q = <<<QUERY
+            SELECT *, venue_photos.v_id AS v_id FROM venue_photos
+            INNER JOIN v_import ON venue_photos.v_id = v_import.v_id
+            WHERE status = 1
+            ORDER BY v_import.wp_id DESC
+        QUERY;
+    }
+    $res = doq($q);
+    $venues = [];
+    while ($row = mysqli_fetch_assoc($res)) {
+        if (!$venues[$row['v_id']]) {
+            $venue = new stdClass();
+            $venue->v_id = $row['v_id'];
+            $venue->wp_id = $row['wp_id'];
+            $venue->photos = [];
+            $venues[$row['v_id']] = $venue;
+        }
+        $photo = new stdClass();
+        $photo->file = $row['photo'];
+        $photo->alt = $row['alt'];
+        $photo->cover = $row['cover'];
+        $venues[$row['v_id']]->photos[] = $photo;
+    }
+    return $venues;
+}
+
 function msg($t, $m) {
     $msg_funcs = ['doq', 'debug', 'status', 'query','msg'];
     $back = debug_backtrace(true, 3);
