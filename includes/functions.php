@@ -131,6 +131,50 @@ function insert_post($post, $v_id=0) : bool {
     return true;
 }
 
+function fetch_photo($photo) {
+    debug($photo);
+    $source_baseurl = 'http://smallweddings.com/ven_img';
+    $source_url = "{$source_baseurl}/{$photo->filename}";
+    $wp_upload_dir = wp_upload_dir();
+    $output_filename = "{$wp_upload_dir}/{$photo->filename}";
+    status("CURLING {$source_url}...");
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $source_url);
+//    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//    curl_setopt($ch, CURLOPT_AUTOREFERER, false);
+//    curl_setopt($ch, CURLOPT_REFERER, "http://www.xcontest.org");
+//    curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+//    curl_setopt($ch, CURLOPT_HEADER, 0);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    status("CURL COMPLETE. RESULT:");
+    debug($result);
+    status("WRITING TO FILE: {$output_filename}...");
+    $fp = fopen($output_filename, 'w');
+    fwrite($fp, $result);
+    fclose($fp);
+    $filesize = filesize($output_filename);
+    status ("FILE_WRITTEN, SIZE: {$filesize}");
+    return $result;
+}
+
+function attach_photo($venue, $photo) {
+    $wp_filetype = wp_check_filetype(basename($photo->filename), null);
+    $wp_upload_dir = wp_upload_dir();
+    $attachment = array(
+        'guid' => $wp_upload_dir['url'] . '/' . basename($photo->filename),
+        'post_mime_type' => $wp_filetype['type'],
+        'post_title' => preg_replace('/\.[^.]+$/', '', basename($photo->filename)),
+        'post_content' => '',
+        'post_status' => 'inherit'
+    );
+    $attach_id = wp_insert_attachment( $attachment, $photo->filename, $venue->wp_id);
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $photo->filename );
+    wp_update_attachment_metadata( $attach_id, $attach_data );
+}
+
 function render_fields($obj) {
     ?>
     <dl>
