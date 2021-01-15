@@ -7,7 +7,8 @@ services:
       - "9906:3306"
   php:
     container_name: php
-    depends_on: -db
+    depends_on:
+      - db
     build:
       context: .
       dockerfile: Dockerfile
@@ -15,3 +16,9 @@ services:
       - 80:80
     volumes:
       - .:/var/www/html/
+  composer:
+    restart: 'no'
+    image: composer/composer:php7
+    command: install
+    volumes:
+      - .:/var/www/html
