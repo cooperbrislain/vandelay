@@ -16,9 +16,3 @@ services:
       - 80:80
     volumes:
       - .:/var/www/html/
-  composer:
-    restart: 'no'
-    image: composer/composer:php7
-    command: install
-    volumes:
-      - .:/var/www/html
