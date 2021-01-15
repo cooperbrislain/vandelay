@@ -27,10 +27,10 @@ $dotenv->load();
 $source = mysqli_connect(
     $_ENV['DB_HOST_SOURCE'],
     $_ENV['DB_USER_SOURCE'],
-    $_ENV['DB_PASSWORD_SOURCE'],
+    $_ENV['DB_PASS_SOURCE'],
     $_ENV['DB_NAME_SOURCE']);
 $target = mysqli_connect(
     $_ENV['DB_HOST_TARGET'],
     $_ENV['DB_USER_TARGET'],
-    $_ENV['DB_PASSWORD_TARGET'],
+    $_ENV['DB_PASS_TARGET'],
     $_ENV['DB_NAME_TARGET']);

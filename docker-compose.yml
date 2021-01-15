@@ -1,18 +1,29 @@
 version: '3.1'
 
 services:
-  db:
+  mysql:
     image: mysql:5.7
+    env_file:
+      - .env
+    environment:
+      - MYSQL_DATABASE: "${DB_NAME_SOURCE}"
+      - MYSQL_USER: "${DB_USER_SOURCE}"
+      - MYSQL_ROOT_PASSWORD: "${DB_ROOTPW_SOURCE}"
+      - MYSQL_PASSWORD: "${DB_PASS_SOURCE}"
     ports:
-      - "9906:3306"
+      - "3306:3306"
+    volumes:
+      - mysql_persist:/var/lib/mysql
   php:
     container_name: php
     depends_on:
-      - db
+      - mysql
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - 80:80
     volumes:
       - .:/var/www/html/
+    ports:
+      - "80:80"
+volumes:
+    mysql_persist:
