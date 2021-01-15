@@ -10,7 +10,7 @@ require_once('includes/data.php');
 require_once('../wp-includes/post.php');
 ?>
 <html lang="en">
-<? require('includes/head.php'); ?>
+<? require_once('includes/head.php'); ?>
 <body>
 <? require_once('includes/header.php'); ?>
 <main>
