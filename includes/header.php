@@ -6,9 +6,17 @@ require_once("opts.php");
     <div id="art"></div>
     <h1>Vandelay</h1>
     <h3>Importer/Exporter</h3>
-    <nav>
-        <? foreach ($pages as $page) { ?>
-            <a href="?page=<?=$page?>"><?=ucfirst($page)?></a>
-        <? } ?>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <? foreach ($pages as $page) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="?page=<?=$page?>"><?=ucfirst($page)?></a>
+                    </li>
+                <? } ?>
+            </ul>
+
+        </div>
     </nav>
 </header>
