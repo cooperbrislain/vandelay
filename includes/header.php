@@ -6,7 +6,7 @@ require_once("opts.php");
     <div id="art"></div>
     <h1>Vandelay</h1>
     <h3>Importer/Exporter</h3>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-collapse navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand"></a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">

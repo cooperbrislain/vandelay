@@ -1,6 +1,6 @@
 <?php
 
-require_once ("../wp-config.php");
+//require_once ("../wp-config.php");
 require_once("vendor/autoload.php");
 
 use Dotenv\Dotenv;
@@ -24,5 +24,13 @@ ini_set('display_errors', 1);;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$source = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], "migrated_from_old_site");
-$target = mysqli_connect("127.0.0.1", $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
+$source = mysqli_connect(
+    $_ENV['DB_HOST_SOURCE'],
+    $_ENV['DB_USER_SOURCE'],
+    $_ENV['DB_PASSWORD_SOURCE'],
+    $_ENV['DB_NAME_SOURCE']);
+$target = mysqli_connect(
+    $_ENV['DB_HOST_TARGET'],
+    $_ENV['DB_USER_TARGET'],
+    $_ENV['DB_PASSWORD_TARGET'],
+    $_ENV['DB_NAME_TARGET']);
