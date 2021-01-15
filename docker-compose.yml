@@ -6,15 +6,18 @@ services:
     env_file:
       - .env
     environment:
-      - MYSQL_DATABASE: "${DB_NAME_SOURCE}"
-      - MYSQL_USER: "${DB_USER_SOURCE}"
-      - MYSQL_ROOT_PASSWORD: "${DB_ROOTPW_SOURCE}"
-      - MYSQL_PASSWORD: "${DB_PASS_SOURCE}"
+      MYSQL_DATABASE: ${DB_NAME_SOURCE}
+      MYSQL_USER: ${DB_USER_SOURCE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOTPW_SOURCE}
+      MYSQL_PASSWORD: ${DB_PASS_SOURCE}
     ports:
-      - "3306:3306"
+      - 3306:3306
     volumes:
       - mysql_persist:/var/lib/mysql
   php:
+    expose:
+      - 9000
+    image: php:7-fpm
     container_name: php
     depends_on:
       - mysql
@@ -23,7 +26,15 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/var/www/html/
+  apache2:
+    image: webdevops/apache:latest
+    volumes:
+      - .:/var/www/html
+      - ./httpd-vandelay.conf:/opt/docker/etc/httpd/conf.d/httpd-vandelay.conf
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
+    links:
+      - php
 volumes:
     mysql_persist:
