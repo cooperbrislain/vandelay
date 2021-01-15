@@ -2,6 +2,7 @@
 $uses = Array();
 $keys = Array();
 $types = Array();
+$pages = Array("dashboard","import","export","transform","photos","venue","debug");
 
 try {
     $q = "SELECT * FROM v_uses";
