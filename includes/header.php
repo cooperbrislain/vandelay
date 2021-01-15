@@ -1,3 +1,7 @@
+<?php
+require_once("data.php");
+require_once("opts.php");
+?>
 <header>
     <div id="art"></div>
     <h1>Vandelay</h1>
