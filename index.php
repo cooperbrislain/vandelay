@@ -25,5 +25,6 @@ require_once('../wp-includes/post.php');
 } ?>
 </main>
 <? require_once('includes/footer.php'); ?>
+<? require_once('includes/scripts.php'); ?>
 </body>
 </html>
