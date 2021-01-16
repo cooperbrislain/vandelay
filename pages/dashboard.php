@@ -13,7 +13,6 @@ $num_imported = 0;
 $num_remaining = 0;
 $num_errors = 0;
 while($row = mysqli_fetch_assoc($res)) {
-    print_r($row);
     switch($row['status']) {
         case(1):
             $num_imported = $row['count'];
