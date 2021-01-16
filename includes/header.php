@@ -9,14 +9,15 @@ require_once("opts.php");
     <nav class="navbar navbar-collapse navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand"></a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <? foreach ($pages as $page) { ?>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="?page=<?=$page?>"><?=ucfirst($page)?></a>
-                    </li>
-                <? } ?>
-            </ul>
-
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <? foreach ($pages as $page) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="?page=<?=$page?>"><?=ucfirst($page)?></a>
+                        </li>
+                    <? } ?>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
