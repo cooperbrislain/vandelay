@@ -13,9 +13,7 @@ define('DIR_VENDOR', __DIR__.'/vendor/');
 set_include_path(get_include_path() .
     PATH_SEPARATOR . '/vendor' .
     PATH_SEPARATOR . '..' .
-    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com' .
-    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com/vandelay' .
-    PATH_SEPARATOR . '/home/t04ucpbct3k8/smallweddings.com/vandelay/vendor'
+    PATH_SEPARATOR . $_ENV['PATH']
 );
 
 ini_set('html_errors', 1);
